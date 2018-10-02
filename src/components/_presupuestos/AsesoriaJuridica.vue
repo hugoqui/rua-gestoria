@@ -63,10 +63,60 @@
         <tfoot>
             <tr>
                 <td colspan="4">
-                    <button class="waves-effect waves-light btn right">
+                    <a class="waves-effect waves-light btn right modal-trigger" href="#modalConfirm">
                         <i class="material-icons right" style="font-size:2rem">equalizer</i>
                         Solicitar Presupeusto
-                    </button>
+                    </a>
+
+                    <div id="modalConfirm" class="modal modal-fixed-footer" tabindex="0">
+                        <div class="modal-content">
+                            <h5 class="color3"> Estamos realizando su presupuesto </h5>
+                             <form class="col s12 m9">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="name" type="text" class="validate" v-model="name">
+                                        <label for="name">Nombre y Apellido</label>
+                                    </div>
+                                    <div class="input-field col m6">
+                                        <i class="material-icons prefix">business</i>
+                                        <input id="business" type="tel" class="validate" v-model="business">
+                                        <label for="business">Nombre Empresa</label>                            
+                                    </div>
+
+                                    <div class="input-field col m6">
+                                        <i class="material-icons prefix">location_on</i>
+                                        <input id="city" type="text" class="validate" v-model="city">
+                                        <label for="city">Ciudad</label>
+                                        <span class="helper-text" data-error="Ingrese una dirección válida" data-success=""></span>
+                                    </div>
+
+                                    <div class="input-field col m6">
+                                        <i class="material-icons prefix">phone</i>
+                                        <input id="telephone" type="tel" class="validate" v-model="phone">
+                                        <label for="telephone">Teléfono</label>
+                                    </div>
+
+                                    <div class="input-field col m6">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="email" type="email" class="validate" v-model="mail">
+                                        <label for="email">Email</label>
+                                        <span class="helper-text" data-error="Ingrese una dirección válida" data-success=""></span>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">mode_edit</i>
+                                        <textarea id="message" rows="5" class="materialize-textarea" v-model="message"></textarea>
+                                        <label for="message">Agregar detalles adicionales</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="red waves-effect waves-green btn-flat" @click="requestQuote()">Aceptar</a>
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </tfoot>
@@ -74,43 +124,105 @@
 </template>
 
 <style scoped>
-    .btn{
-        padding: 10px;
-        height: auto;
-    }
-    .btn i{font-size: 2rem; margin-top: -4px}
+.btn {
+  padding: 10px;
+  height: auto;
+}
+.btn i {
+  font-size: 2rem;
+  margin-top: -4px;
+}
 </style>
 
 
 <script>
 export default {
+  mounted: function() {
+    $(".modal").modal();
+  },
   data() {
     return {
-        total :0,
-        el1: false, el2: false, el3: false, el4: false,
-        el5: false, el6: false, el7: false, el8: false
+      total: 0,
+      el1: false,
+      el2: false,
+      el3: false,
+      el4: false,
+      el5: false,
+      el6: false,
+      el7: false,
+      el8: false,
+
+      name: "",
+      business: "",
+      city: "",
+      phone: "",
+      mail: "",
+      message: ""
     };
   },
-  methods:{
-      getTotal(amount){          
-          this.total += amount;
-      },
-      requestQuote(){
-          let msg = "Solicitud de Asesoría Jurídica \n\r";
+  methods: {
+    getTotal(amount) {
+      this.total += amount;
+    },
+    requestQuote() {
+      let msg = "Solicitud de Asesoría Jurídica \n\r";
 
-          if (this.el1==true) {
-              msg = msg + "LSSICE Web o App corporativa - por €125\n";
-          }
-
-          if (this.el2==true) {
-              msg = msg + "Protección de Datos Básica - por €475\n";
-          }
-
-          
-
-
-        msg = msg + "TOTAL: €" + this.total;
+      if (this.el1 == true) {
+        msg = msg + "LSSICE Web o App corporativa - por €125\n";
       }
+
+      if (this.el2 == true) {
+        msg = msg + "Protección de Datos Básica - por €475\n";
+      }
+
+      if (this.el3 == true) {
+        msg = msg + "Seguimiento protección de datos básica (anual) - por €175\n";
+      }
+
+      if (this.el4 == true) {
+        msg = msg + "Contrato de prestación de servicios - por €350\n";
+      }
+
+      if (this.el5 == true) {
+        msg = msg + "Contrato mercantil - por €350\n";
+      }
+      
+      if (this.el6 == true) {
+        msg = msg + "Contrato mercantil: revisión - por €150\n";
+      }
+
+      if (this.el7 == true) {
+        msg = msg + "Contrato de alquiler - por €350\n";
+      }
+
+      if (this.el8 == true) {
+        msg = msg + "Constitución de Sociedades - por €590\n";
+      }
+
+      msg = msg + "TOTAL: €" + this.total;        
+
+      // enviar mensaje
+       $.post(
+        "http://backend.foxclean.es/api/Clientes/Peticion/",
+        {
+          EMPRESA: this.business,
+          NOMBRE: this.name,
+          CIUDAD: this.city,
+          TELEFONO: this.phone,
+          MAIL: this.mail,
+          PETICION:
+            "Rua Gestoría: \n\r" +
+            msg + ' \n\r' + this.message            
+        },
+        function(data, status) {
+          if (data == "ok" && status == "success") {
+            console.log("Se envió el mensaje..");
+          } else {
+            alert("error, intente nuevamente");
+          }
+        }
+      );
+    }
   }
 };
 </script>
