@@ -15,7 +15,7 @@
                 <li><a class="grey-text text-lighten-3" href="#!">Asesoría</a></li>
                 <li><a class="grey-text text-lighten-3" href="#!">Autónomos</a></li>
                 <li><a class="grey-text text-lighten-3" href="#!">Empresas</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Presupuesto</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Tarifas</a></li>
               </ul>
             </div>
           </div>

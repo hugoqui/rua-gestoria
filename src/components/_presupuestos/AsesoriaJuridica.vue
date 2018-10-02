@@ -95,9 +95,21 @@ export default {
       getTotal(amount){          
           this.total += amount;
       },
-      showMsg(val){
-          console.log("este");
-          console.log(val);
+      requestQuote(){
+          let msg = "Solicitud de Asesoría Jurídica \n\r";
+
+          if (this.el1==true) {
+              msg = msg + "LSSICE Web o App corporativa - por €125\n";
+          }
+
+          if (this.el2==true) {
+              msg = msg + "Protección de Datos Básica - por €475\n";
+          }
+
+          
+
+
+        msg = msg + "TOTAL: €" + this.total;
       }
   }
 };

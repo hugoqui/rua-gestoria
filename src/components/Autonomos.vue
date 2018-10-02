@@ -54,7 +54,7 @@
                         <td>Programa de Facturación</td>
                         </tr>
                         <tr>
-                        <td>Gestión de Contabilidad</td>
+                        <td><del class="grey-text lighten-5">Gestión de Contabilidad</del> </td>
                         <td><del class="grey-text lighten-5">Gestión de Contabilidad</del> </td>
                         <td>Gestión de Contabilidad</td>
                         </tr>

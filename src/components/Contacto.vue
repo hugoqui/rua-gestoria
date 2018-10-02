@@ -15,38 +15,45 @@
             <div class="row" style="margin-top:30px">
                 <form class="col s12 m9">
                     <div class="row">
-                        <div class="input-field col m6">
+                        <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="name" type="text" class="validate">
+                            <input id="name" type="text" class="validate" v-model="name">
                             <label for="name">Nombre y Apellido</label>
                         </div>
                         <div class="input-field col m6">
                             <i class="material-icons prefix">business</i>
-                            <input id="business" type="tel" class="validate">
-                            <label for="business">Nombre Empresa</label>
+                            <input id="business" type="tel" class="validate" v-model="business">
+                            <label for="business">Nombre Empresa</label>                            
+                        </div>
+
+                        <div class="input-field col m6">
+                            <i class="material-icons prefix">location_on</i>
+                            <input id="city" type="text" class="validate" v-model="city">
+                            <label for="city">Ciudad</label>
+                            <span class="helper-text" data-error="Ingrese una dirección válida" data-success=""></span>
                         </div>
 
                         <div class="input-field col m6">
                             <i class="material-icons prefix">phone</i>
-                            <input id="telephone" type="tel" class="validate">
+                            <input id="telephone" type="tel" class="validate" v-model="phone">
                             <label for="telephone">Teléfono</label>
                         </div>
 
                         <div class="input-field col m6">
                             <i class="material-icons prefix">email</i>
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" class="validate" v-model="mail">
                             <label for="email">Email</label>
                             <span class="helper-text" data-error="Ingrese una dirección válida" data-success=""></span>
                         </div>
 
                         <div class="input-field col s12">
                             <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="message" rows="5" class="materialize-textarea"></textarea>
+                            <textarea id="message" rows="5" class="materialize-textarea" v-model="message"></textarea>
                             <label for="message">Escriba su Mensaje</label>
                         </div>
                     </div>
 
-                    <a class="waves-effect waves-light btn fondo2 modal-trigger btn-large" href="#modal1"><i class="material-icons right">send</i>Enviar</a>
+                    <a class="waves-effect waves-light btn fondo2 modal-trigger btn-large" @click="send()" href="#modal1"><i class="material-icons right">send</i>Enviar</a>
                     <!-- Mensaje -->
                     <div id="modal1" class="modal" tabindex="0">
                         <div class="modal-content">
@@ -65,6 +72,10 @@
                     <img src="./../assets/qrcode.png" class="materialboxed" alt="" style="margin:auto">
                 </div>
             </div>
+
+            <!-- <button class="btn" @click="sumar()">Click Aqui</button>
+            <input type="text" v-model="name">
+            <h1>Contador: {{contador}} *** {{name}}</h1> -->
         </div>
     </div>
 </div>
@@ -72,17 +83,53 @@
 
 <script>
 export default {
-mounted: function() {
-    $('.parallax').parallax();
-    $('.materialboxed').materialbox();
-    $('.modal').modal();
+  mounted: function() {
+    $(".parallax").parallax();
+    $(".materialboxed").materialbox();
+    $(".modal").modal();
+  },
+
+  data() {
+    return {
+      name: "",
+      business: "",
+      city: "",
+      phone: "",
+      mail: "",
+      message: "" 
+    };
+  },
+
+  methods: {
+    send() {
+      $.post(
+        "http://backend.foxclean.es/api/Clientes/Peticion/",
+        {
+          EMPRESA: this.business,
+          NOMBRE: this.name,
+          CIUDAD: this.city,
+          TELEFONO: this.phone,
+          MAIL: this.mail,
+          PETICION:
+            "Rua Gestoría: \n\r" +
+            this.message            
+        },
+        function(data, status) {
+          if (data == "ok" && status == "success") {
+            console.log("Se envió el mensaje..");
+          } else {
+            alert("error, intente nuevamente");
+          }
+        }
+      );
+    }
   }
-}
+};
 </script>
 
 <style>
-    .parallax-container{
-        height: 400px;
-        top: -65px;
-    }
+.parallax-container {
+  height: 400px;
+  top: -65px;
+}
 </style>

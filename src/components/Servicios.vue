@@ -23,7 +23,7 @@
             <h3 class="color2">Creación de Empresas</h3>
             <p><strong class="color3">Asesores expertos en la creación de nuevas empresas</strong></p>
             <div class="col m12 l6">
-                <p>Ofrecemos servicios especializados de gestoría para emprendedores. El equipo de profesionales de Acompany te acompañará en la gestión de todo el proceso, desde la idea, hasta el desarrollo de la gestión fiscal y contable, y el asesoramiento financiero y jurídico.</p>
+                <p>Ofrecemos servicios especializados de gestoría para emprendedores. El equipo de profesionales de Rua Gestoría te acompañará en la gestión de todo el proceso, desde la idea, hasta el desarrollo de la gestión fiscal y contable, y el asesoramiento financiero y jurídico.</p>
                 <p>Antes de lanzarse a crear una empresa, es necesario valorar si la idea de negocio es viable, los recursos necesarios y conocer todos  los requisitos legales, fiscales y burocráticos. Tener ideas y visión de negocio es importante, pero no siempre es fácil saber cuáles son los mejores pasos a seguir para crear una empresa de éxito, conocer los diferentes aspectos que harán de la idea un negocio rentable y cómo hacerlo real.</p>                
             </div>
             <div class="col m12 l6 center-align">                                
@@ -33,8 +33,8 @@
         <div class="row">
             <div class="col m4">
                 <p>
-                <strong class="color3">Planificación financiera</strong>
-                    <ul>
+                <h5 class="color3 center encuadrados">Planificación financiera</h5>
+                    <ul class="center">
                         <li>Análisis y asesoramiento financiero de la idea de negocio.</li>
                         <li>Elaboración de Planes de Negocio, Financieros y estudios de viabilidad.</li>
                         <li>Búsqueda de financiación y negociación directa con entidades bancarias.</li>
@@ -42,9 +42,9 @@
                 </p>                
             </div>
             <div class="col m4">
-                <p>
-                <strong class="color3">Fiscalidad para emprendedores</strong>
-                    <ul>
+                <p class="center">
+                <h5 class="color3 center encuadrados">Fiscalidad para emprendedores</h5>
+                    <ul class="center">
                         <li>Te asesoramos para decidir la forma jurídica más adecuada para tu negocio.</li>
                         <li>Alta de Autónomos en Hacienda y la Seguridad Social.</li>
                         <li>Asesoramiento legal y gestión de constitución de nuevas sociedades.</li>
@@ -52,9 +52,9 @@
                 </p>
             </div>
             <div class="col m4">
-                <p>
-                <strong class="color3">Asesoría Legal</strong>
-                    <ul>
+                <p class="center">
+                <h5 class="color3 center encuadrados">Asesoría Legal</h5>
+                    <ul class="center">
                         <li>Elaboración de contratos mercantiles y pactos de socios.</li>
                         <li>LOPD: revisión e implementación de la política de protección de datos.</li>
                         <li>LSSICE – Derecho de Internet: Adecuación de páginas webs, apps y comercios electrónicos.</li>
@@ -78,19 +78,19 @@
         </div>
         <div class="row">
             <h5 class="color3 center-align">Asesoría Fiscal online</h5>            
-            <p class="col m4">Estudio sobre la forma jurídica más adecuada para nuevos negocios.</p>                                
-            <p class="col m4">Planificación fiscal para empresas, autónomos y particulares.</p>                                
-            <p class="col m4">Requerimientos, inspecciones y recursos de órganos administrativos.</p>                                                        
+            <p class="col m4 center">Estudio sobre la forma jurídica más adecuada para nuevos negocios.</p>                                
+            <p class="col m4 center">Planificación fiscal para empresas, autónomos y particulares.</p>                                
+            <p class="col m4 center">Requerimientos, inspecciones y recursos de órganos administrativos.</p>                                                        
         </div>
         <div class="row">
             <h5 class="color3 center-align">Impuestos</h5>            
-            <p class="col m3">
+            <p class="col m3 center">
                 Presentación de todo tipo de Declaraciones informativas.  Contrata online los principales modelos.
             </p>                                
-            <p class="col m4">
+            <p class="col m4 center">
                 Confección y presentación de todo tipo de impuestos. Contrata online los principales modelos.
             </p>                                
-            <p class="col m5">
+            <p class="col m5 center">
                 Expertos en gestión de la Declaración de la Renta, incluyendo presentación de Rentas Complementarias, fuera de plazo, Patrimonio o extranjeros residentes.
             </p>                                
             
@@ -130,4 +130,11 @@ ul, li {
     font-size: 15px;
 }
 
+.center {
+    text-align: center;
+}
+
+.encuadrados {
+    height: 60px
+}
 </style>
