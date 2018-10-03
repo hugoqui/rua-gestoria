@@ -267,10 +267,60 @@
         <tfoot>
             <tr>
                 <td colspan="4">
-                    <button class="waves-effect waves-light btn right">
+                    <a class="waves-effect waves-light btn right modal-trigger" href="#modalConfirm">
                         <i class="material-icons right" style="font-size:2rem">equalizer</i>
                         Solicitar Presupeusto
-                    </button>
+                    </a>
+
+                    <div id="modalConfirm" class="modal modal-fixed-footer" tabindex="0">
+                        <div class="modal-content">
+                            <h5 class="color3"> Estamos realizando su presupuesto </h5>
+                             <form class="col s12 m9">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="name" type="text" class="validate" v-model="name">
+                                        <label for="name">Nombre y Apellido</label>
+                                    </div>
+                                    <div class="input-field col m6">
+                                        <i class="material-icons prefix">business</i>
+                                        <input id="business" type="tel" class="validate" v-model="business">
+                                        <label for="business">Nombre Empresa</label>                            
+                                    </div>
+
+                                    <div class="input-field col m6">
+                                        <i class="material-icons prefix">location_on</i>
+                                        <input id="city" type="text" class="validate" v-model="city">
+                                        <label for="city">Ciudad</label>
+                                        <span class="helper-text" data-error="Ingrese una dirección válida" data-success=""></span>
+                                    </div>
+
+                                    <div class="input-field col m6">
+                                        <i class="material-icons prefix">phone</i>
+                                        <input id="telephone" type="tel" class="validate" v-model="phone">
+                                        <label for="telephone">Teléfono</label>
+                                    </div>
+
+                                    <div class="input-field col m6">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="email" type="email" class="validate" v-model="mail">
+                                        <label for="email">Email</label>
+                                        <span class="helper-text" data-error="Ingrese una dirección válida" data-success=""></span>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">mode_edit</i>
+                                        <textarea id="message" rows="5" class="materialize-textarea" v-model="message"></textarea>
+                                        <label for="message">Agregar detalles adicionales</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="red waves-effect waves-green btn-flat" @click="requestQuote()">Aceptar</a>
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </tfoot>
@@ -288,11 +338,6 @@
 }
 
 @media only screen and (max-width: 450px) {
-  .prueba {    
-    overflow: scroll;
-    width: 100%;
-  }
-
   table,
   tr,
   td {
@@ -355,9 +400,251 @@ export default {
     getTotal(amount) {
       this.total += amount;
     },
-    showMsg(val) {
-      console.log("este");
-      console.log(val);
+    requestQuote() {
+      let msg = "Solicitud de Gestoría Fiscal y Laboral \n\r";
+
+      if (this.el1 == true) {
+        msg = msg + "Alta de autónomos - por €60\n";
+      }
+
+      if (this.el2 == true) {
+        msg =
+          msg + "Asesoramiento online fiscal o laboral: 30 minutos - por €35\n";
+      }
+
+      if (this.el3 == true) {
+        msg = msg + "Asesoramiento online fiscal o laboral: 1 hora - por €60\n";
+      }
+
+      if (this.el4 == true) {
+        msg =
+          msg +
+          "Asesoramiento online financiero o legal: 30 minutos - por €45\n";
+      }
+
+      if (this.el5 == true) {
+        msg =
+          msg + "Asesoramiento online financiero o legal: 1 hora	 - por €75\n";
+      }
+
+      if (this.el6 == true) {
+        msg = msg + "Autónomos básico	 - por €30\n";
+      }
+
+      if (this.el7 == true) {
+        msg = msg + "Autónomos completo	 - por €54\n";
+      }
+
+      if (this.el8 == true) {
+        msg = msg + "Autónomos estándar - por €45\n";
+      }
+
+      if (this.el9 == true) {
+        msg = msg + "Baja de autónomos - por €60\n";
+      }
+
+      if (this.el10 == true) {
+        msg = msg + "Certificado corriente de pagos de Hacienda - por €12\n";
+      }
+
+      if (this.el11 == true) {
+        msg =
+          msg + "Certificado corriente de pagos Seguridad Social - por €12\n";
+      }
+
+      if (this.el12 == true) {
+        msg = msg + "Certificado digital - por €40\n";
+      }
+
+      if (this.el13 == true) {
+        msg = msg + "Declaración de la Renta (IRPF)	 - desde €39\n";
+      }
+
+      if (this.el14 == true) {
+        msg = msg + "Declaración de la Renta Complementaria - por €60\n";
+      }
+
+      if (this.el15 == true) {
+        msg = msg + "Declaración de la Renta Fuera de plazo - por €39\n";
+      }
+
+      if (this.el16 == true) {
+        msg = msg + "Declaración de Patrimonio - por €70\n";
+      }
+
+      if (this.el17 == true) {
+        msg = msg + "Empresas básico - por €88\n";
+      }
+
+      if (this.el18 == true) {
+        msg = msg + "Empresas completo (25-50 facturas/mes)	 - por €152\n";
+      }
+
+      if (this.el19 == true) {
+        msg = msg + "Empresas completo (50-100 facturas/mes) - por €180\n";
+      }
+
+      if (this.el20 == true) {
+        msg = msg + "Empresas completo (hasta 25 facturas/mes)	 - por €125\n";
+      }
+
+      if (this.el21 == true) {
+        msg = msg + "Impuesto sobre sociedades y cuentas anuales - por €350\n";
+      }
+
+      if (this.el22 == true) {
+        msg = msg + "Laboral: cuota mensual base - por €40\n";
+      }
+
+      if (this.el23 == true) {
+        msg = msg + "Laboral: número de nóminas - por €12\n";
+      }
+
+      if (this.el24 == true) {
+        msg = msg + "Modelo 036 o 037: Alta de actividad - por €30\n";
+      }
+
+      if (this.el25 == true) {
+        msg = msg + "Modelo 036 o 037: Modificación censal - por €30\n";
+      }
+
+      if (this.el26 == true) {
+        msg = msg + "Modelo 111: IRPF trimestral autónomos - por €15\n";
+      }
+
+      if (this.el27 == true) {
+        msg = msg + "Modelo 115: Retenciones trimestrales alquiler - por €15\n";
+      }
+
+      if (this.el28 == true) {
+        msg = msg + "Modelo 130: Pago a cuenta IRPF	 - por €15\n";
+      }
+
+      if (this.el29 == true) {
+        msg = msg + "Modelo 180: Resumen anual retenciones - por €90\n";
+      }
+
+      if (this.el30 == true) {
+        msg = msg + "Modelo 190: Resumen anual IRPF - por €90\n";
+      }
+
+      if (this.el31 == true) {
+        msg = msg + "Modelo 193: Resumen anual retenciones - por €90\n";
+      }
+
+      if (this.el32 == true) {
+        msg = msg + "Modelo 210: Impuesto Renta No Residentes - por €75\n";
+      }
+
+      if (this.el33 == true) {
+        msg = msg + "Modelo 303: Autoloquidación del IVA - por €15\n";
+      }
+
+      if (this.el34 == true) {
+        msg =
+          msg +
+          "Modelo 347: Declaración de operaciones con terceros - por €50\n";
+      }
+
+      if (this.el35 == true) {
+        msg = msg + "Modelo 390: Resumen anual del IVA - por €25\n";
+      }
+
+      if (this.el36 == true) {
+        msg = msg + "Modelo 720: Bienes e inversiones extranjero - por €150\n";
+      }
+
+      if (this.el37 == true) {
+        msg = msg + "Modelo D6: Inversiones en el extranjero - por €150\n";
+      }
+
+      if (this.el38 == true) {
+        msg = msg + "Notificaciones Agencia Tributaria - por €7\n";
+      }
+
+      if (this.el39 == true) {
+        msg = msg + "Notificaciones de la Seguridad Social - por €7\n";
+      }
+
+      if (this.el40 == true) {
+        msg = msg + "Pre-cálculo Declaración de la Renta - por €60\n";
+      }
+
+      if (this.el41 == true) {
+        msg = msg + "Requerimiento de Hacienda - por €60\n";
+      }
+
+      if (this.el42 == true) {
+        msg = msg + "Desplazamiento administración - por €60\n";
+      }
+
+      msg = msg + "TOTAL: €" + this.total;
+
+      $.post(
+        "http://backend.foxclean.es/api/Clientes/Peticion/",
+        {
+          EMPRESA: this.business,
+          NOMBRE: this.name,
+          CIUDAD: this.city,
+          TELEFONO: this.phone,
+          MAIL: this.mail,
+          PETICION:
+            "Rua Gestoría: \n\r" +
+            msg +
+            " \n\r Detalles adicionales: " +
+            this.message
+        },
+        function(data, status) {
+          if (data == "ok" && status == "success") {
+            this.el1 = false;
+            this.el2 = false;
+            this.el3 = false;
+            this.el4 = false;
+            this.el5 = false;
+            this.el6 = false;
+            this.el7 = false;
+            this.el8 = false;
+            this.el9 = false;
+            this.el10 = false;
+            this.el11 = false;
+            this.el12 = false;
+            this.el13 = false;
+            this.el14 = false;
+            this.el15 = false;
+            this.el16 = false;
+            this.el17 = false;
+            this.el18 = false;
+            this.el19 = false;
+            this.el20 = false;
+            this.el21 = false;
+            this.el22 = false;
+            this.el23 = false;
+            this.el24 = false;
+            this.el25 = false;
+            this.el26 = false;
+            this.el27 = false;
+            this.el28 = false;
+            this.el29 = false;
+            this.el30 = false;
+            this.el31 = false;
+            this.el32 = false;
+            this.el33 = false;
+            this.el34 = false;
+            this.el35 = false;
+            this.el36 = false;
+            this.el37 = false;
+            this.el38 = false;
+            this.el39 = false;
+            this.el40 = false;
+            this.el41 = false;
+            this.el42 = false;
+
+            console.log("Se envió el mensaje..");
+          } else {
+            alert("error, intente nuevamente");
+          }
+        }
+      );
     }
   }
 };

@@ -164,6 +164,7 @@ export default {
     getTotal(amount) {
       this.total += amount;
     },
+    
     requestQuote() {
       let msg = "Solicitud de Asesoría Jurídica \n\r";
 
@@ -176,7 +177,8 @@ export default {
       }
 
       if (this.el3 == true) {
-        msg = msg + "Seguimiento protección de datos básica (anual) - por €175\n";
+        msg =
+          msg + "Seguimiento protección de datos básica (anual) - por €175\n";
       }
 
       if (this.el4 == true) {
@@ -186,7 +188,7 @@ export default {
       if (this.el5 == true) {
         msg = msg + "Contrato mercantil - por €350\n";
       }
-      
+
       if (this.el6 == true) {
         msg = msg + "Contrato mercantil: revisión - por €150\n";
       }
@@ -199,10 +201,9 @@ export default {
         msg = msg + "Constitución de Sociedades - por €590\n";
       }
 
-      msg = msg + "TOTAL: €" + this.total;        
+      msg = msg + "TOTAL: €" + this.total;
 
-      // enviar mensaje
-       $.post(
+      $.post(
         "http://backend.foxclean.es/api/Clientes/Peticion/",
         {
           EMPRESA: this.business,
@@ -212,10 +213,21 @@ export default {
           MAIL: this.mail,
           PETICION:
             "Rua Gestoría: \n\r" +
-            msg + ' \n\r' + this.message            
+            msg +
+            " \n\r Detalles adicionales: " +
+            this.message
         },
         function(data, status) {
           if (data == "ok" && status == "success") {
+            this.el1 = false;
+            this.el2 = false;
+            this.el3 = false;
+            this.el4 = false;
+            this.el5 = false;
+            this.el6 = false;
+            this.el7 = false;
+            this.el8 = false;
+
             console.log("Se envió el mensaje..");
           } else {
             alert("error, intente nuevamente");
