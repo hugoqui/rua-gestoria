@@ -81,7 +81,7 @@
     <tfoot>
         <tr>
             <td colspan="4">
-                <a class="waves-effect waves-light btn right" href="#modalConfirm">
+                <a v-bind:disabled="total<=0" class="waves-effect waves-light btn right modal-trigger" href="#modalConfirm">
                     <i class="material-icons right" style="font-size:2rem">equalizer</i>
                     Solicitar Presupeusto
                 </a>
@@ -262,7 +262,19 @@ export default {
         },
         function(data, status) {
           if (data == "ok" && status == "success") {
-            this.el1 = false;
+
+              this.uncheckElements
+            
+            console.log("Se envió el mensaje..");
+          } else {
+            alert("error, intente nuevamente");
+          }
+        }
+      );
+    },
+    
+    uncheckElements(){        
+        this.el1 = false;
             this.el2 = false;
             this.el3 = false;
             this.el4 = false;
@@ -273,12 +285,9 @@ export default {
             this.el9 = false;
             this.el10 = false;
             this.el11 = false;
-            console.log("Se envió el mensaje..");
-          } else {
-            alert("error, intente nuevamente");
-          }
-        }
-      );
+
+        console.log("Se envió el mensaje..");
+        alert("Gracias por contactarnos, en breve completaremos su solicitud")
     }
   }
 };

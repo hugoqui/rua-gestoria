@@ -267,7 +267,7 @@
         <tfoot>
             <tr>
                 <td colspan="4">
-                    <a class="waves-effect waves-light btn right modal-trigger" href="#modalConfirm">
+                    <a v-bind:disabled="total<=0" class="waves-effect waves-light btn right modal-trigger" href="#modalConfirm">
                         <i class="material-icons right" style="font-size:2rem">equalizer</i>
                         Solicitar Presupeusto
                     </a>
@@ -317,7 +317,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <a class="red waves-effect waves-green btn-flat" @click="requestQuote()">Aceptar</a>
+                            <a class="red waves-effect waves-green btn-flat modal-close" @click="requestQuote()">Aceptar</a>
                             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
                         </div>
                     </div>
@@ -349,6 +349,9 @@
 
 <script>
 export default {
+  mounted: function() {
+    $(".modal").modal();
+  },
   data() {
     return {
       total: 0,
@@ -393,7 +396,14 @@ export default {
       el39: false,
       el40: false,
       el41: false,
-      el42: false
+      el42: false,
+
+      name: "",
+      business: "",
+      city: "",
+      phone: "",
+      mail: "",
+      message: ""
     };
   },
   methods: {
@@ -596,55 +606,59 @@ export default {
         },
         function(data, status) {
           if (data == "ok" && status == "success") {
-            this.el1 = false;
-            this.el2 = false;
-            this.el3 = false;
-            this.el4 = false;
-            this.el5 = false;
-            this.el6 = false;
-            this.el7 = false;
-            this.el8 = false;
-            this.el9 = false;
-            this.el10 = false;
-            this.el11 = false;
-            this.el12 = false;
-            this.el13 = false;
-            this.el14 = false;
-            this.el15 = false;
-            this.el16 = false;
-            this.el17 = false;
-            this.el18 = false;
-            this.el19 = false;
-            this.el20 = false;
-            this.el21 = false;
-            this.el22 = false;
-            this.el23 = false;
-            this.el24 = false;
-            this.el25 = false;
-            this.el26 = false;
-            this.el27 = false;
-            this.el28 = false;
-            this.el29 = false;
-            this.el30 = false;
-            this.el31 = false;
-            this.el32 = false;
-            this.el33 = false;
-            this.el34 = false;
-            this.el35 = false;
-            this.el36 = false;
-            this.el37 = false;
-            this.el38 = false;
-            this.el39 = false;
-            this.el40 = false;
-            this.el41 = false;
-            this.el42 = false;
-
-            console.log("Se envió el mensaje..");
+            this.uncheckElements;
           } else {
             alert("error, intente nuevamente");
           }
         }
       );
+    },
+    uncheckElements() {
+      this.el1 = false;
+      this.el2 = false;
+      this.el3 = false;
+      this.el4 = false;
+      this.el5 = false;
+      this.el6 = false;
+      this.el7 = false;
+      this.el8 = false;
+      this.el9 = false;
+      this.el10 = false;
+      this.el11 = false;
+      this.el12 = false;
+      this.el13 = false;
+      this.el14 = false;
+      this.el15 = false;
+      this.el16 = false;
+      this.el17 = false;
+      this.el18 = false;
+      this.el19 = false;
+      this.el20 = false;
+      this.el21 = false;
+      this.el22 = false;
+      this.el23 = false;
+      this.el24 = false;
+      this.el25 = false;
+      this.el26 = false;
+      this.el27 = false;
+      this.el28 = false;
+      this.el29 = false;
+      this.el30 = false;
+      this.el31 = false;
+      this.el32 = false;
+      this.el33 = false;
+      this.el34 = false;
+      this.el35 = false;
+      this.el36 = false;
+      this.el37 = false;
+      this.el38 = false;
+      this.el39 = false;
+      this.el40 = false;
+      this.el41 = false;
+      this.el42 = false;
+
+      console.log("Se envió el mensaje..");
+      alert("Gracias por contactarnos, en breve completaremos su solicitud");
     }
   }
 };

@@ -62,8 +62,9 @@
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="4">
-                    <a class="waves-effect waves-light btn right modal-trigger" href="#modalConfirm">
+                <td colspan="4">  
+                    <!-- <button  @click="uncheckElements()" >probar</button>                   -->
+                    <a v-bind:disabled="total<=0" class="waves-effect waves-light btn right modal-trigger" href="#modalConfirm">
                         <i class="material-icons right" style="font-size:2rem">equalizer</i>
                         Solicitar Presupeusto
                     </a>
@@ -113,7 +114,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <a class="red waves-effect waves-green btn-flat" @click="requestQuote()">Aceptar</a>
+                            <a class="red waves-effect waves-green btn-flat modal-close" @click="requestQuote()">Aceptar</a>
                             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
                         </div>
                     </div>
@@ -164,7 +165,7 @@ export default {
     getTotal(amount) {
       this.total += amount;
     },
-    
+
     requestQuote() {
       let msg = "Solicitud de Asesoría Jurídica \n\r";
 
@@ -219,21 +220,26 @@ export default {
         },
         function(data, status) {
           if (data == "ok" && status == "success") {
-            this.el1 = false;
-            this.el2 = false;
-            this.el3 = false;
-            this.el4 = false;
-            this.el5 = false;
-            this.el6 = false;
-            this.el7 = false;
-            this.el8 = false;
-
-            console.log("Se envió el mensaje..");
+            this.uncheckElements();
           } else {
             alert("error, intente nuevamente");
           }
         }
       );
+    },
+
+    uncheckElements() {
+      this.el1 = false;
+      this.el2 = false;
+      this.el3 = false;
+      this.el4 = false;
+      this.el5 = false;
+      this.el6 = false;
+      this.el7 = false;
+      this.el8 = false;
+
+      console.log("Se envió el mensaje..");
+      alert("Gracias por contactarnos, en breve completaremos su solicitud");
     }
   }
 };
