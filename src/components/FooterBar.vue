@@ -12,10 +12,10 @@
             <div class="col l4 offset-l2 s12">
               <h5 class="white-text">Asesoría Autónomos y Personal</h5>
               <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Asesoría</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Autónomos</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Empresas</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Tarifas</a></li>
+                <li><router-link class="grey-text text-lighten-3" to="servicios">Asesoría</router-link></li>
+                <li><router-link class="grey-text text-lighten-3" to="autonomos">Autónomos</router-link></li>
+                <li><router-link class="grey-text text-lighten-3" to="empresas">Empresas</router-link></li>
+                <li><router-link class="grey-text text-lighten-3" to="tarifas">Tarifas</router-link></li>                              
               </ul>
             </div>
           </div>
@@ -23,7 +23,7 @@
         <div class="footer-copyright">
           <div class="container">
           © 2018 Copyright 
-          <a class="grey-text text-lighten-4 right" href="#!">Rua Gestoría</a>
+          <a class="grey-text text-lighten-4 right" href="/">Rua Gestoría</a>
           </div>
         </div>
   </footer>

@@ -656,8 +656,6 @@ export default {
       this.el40 = false;
       this.el41 = false;
       this.el42 = false;
-
-      console.log("Se envió el mensaje..");
       alert("Gracias por contactarnos, en breve completaremos su solicitud");
     }
   }

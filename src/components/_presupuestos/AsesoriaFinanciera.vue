@@ -131,7 +131,7 @@
                         </div>
                         <div class="modal-footer">
                             <a class="red waves-effect waves-green btn-flat" @click="requestQuote()">Aceptar</a>
-                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                            <a href="#" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
                         </div>
                     </div>
             </td>
