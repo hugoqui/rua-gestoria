@@ -5,7 +5,7 @@
         <li class="active" style="opacity: 1; transform: translateX(0px) translateY(0px);">
           <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="background-image: url(https://rev-advisors.com/wp-content/uploads/2017/01/slide-three.jpg);"> <!-- random image -->
           <div class="caption center-align" style="opacity: 1; transform: translateX(0px) translateY(0px);">
-            <h3 class="uppercase">ASESORÍA ONLINE Y PRESENCIAL</h3>
+            <h3 class="uppercase">ASESORÍA ONLINE</h3>
             <h5 class="">Para autónomos y empresas.</h5>
           </div>
         </li>
@@ -19,8 +19,8 @@
         <li style="opacity: 0; transform: translateX(0px) translateY(0px);" class="">
           <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="background-image: url(https://rev-advisors.com/wp-content/uploads/2017/01/slide-two.jpg);"> <!-- random image -->
           <div class="caption left-align" style="opacity: 0; transform: translateX(100px);">
-            <h3 class="uppercase">Asesoría Jurídica</h3>
-            <h5 class="">Abogados especializados en derecho y protección de datos.</h5>
+            <h3 class="uppercase">Asesoramiento integral online</h3>
+            <h5 class="">Te podemos asesorar en todas las áreas clave de tu negocio.</h5>
           </div>
         </li>
       </ul>
@@ -34,10 +34,10 @@
     
     <main class="container main">
       <h1 class="center-align color1">Rua Gestoría</h1>
-      <h2 class="center-align color2">Asesoría fiscal online para empresas y autónomos</h2>
+      <h2 class="center-align color2">Asesoría fiscal-contable online para empresas y autónomos</h2>
       <p class="center-align color3">
         Gestionar tu negocio nunca ha sido tan fácil. <br>
-        Seas pyme o freelance, Rua Gestoría es tu gestoría online más completa. <br>
+        Seas PYME o freelance, Rua Gestoría es tu gestoría online más completa. <br>
         Precio final, sin sorpresas. <br>
       </p>
 
@@ -54,23 +54,23 @@
               <td class="grey lighten-3">
                 <h2>30<small>€/mes</small> </h2>
                 <strong>BÁSICO</strong> <br>
-                <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
               </td>
               <td class="grey lighten-3">
                 <h2>39<small>€/mes</small> </h2>
                 <strong>ESTÁNDAR</strong> <br>
-                <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
               </td>
               <td class="grey lighten-3">
                 <h2>54<small>€/mes</small> </h2>
                 <strong>COMPLETO</strong> <br>
-                <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
               </td>
             </tr>
             <tr>
-              <td>Asesoramiento Fiscal</td>
-              <td>Asesoramiento Fiscal</td>
-              <td>Asesoramiento Fiscal</td>
+              <td>Asesoramiento Fiscal y Contable</td>              
+              <td>Asesoramiento Fiscal y Contable</td>              
+              <td>Asesoramiento Fiscal y Contable</td>              
             </tr>
             <tr>
               <td>Presentación de impuestos</td>
@@ -82,8 +82,8 @@
               <td>Programa de Facturación</td>
               <td>Programa de Facturación</td>
             </tr>
-            <tr>
-              <td>Gestión de Contabilidad</td>
+            <tr>              
+              <td><del class="grey-text lighten-5">Gestión de Contabilidad</del> </td>
               <td><del class="grey-text lighten-5">Gestión de Contabilidad</del> </td>
               <td>Gestión de Contabilidad</td>
             </tr>
@@ -97,17 +97,17 @@
               <td class="grey lighten-3">
                 <h2>88<small>€/mes</small> </h2>
                 <strong>FISCAL BÁSICO</strong> <br>
-                <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
               </td>
               <td class="grey lighten-3">
                 <h2>125<small>€/mes</small> </h2>
                 <strong>FISCAL COMPLETO</strong> <br>
-                <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
               </td>              
             </tr>
             <tr>
-              <td>Asesoramiento Fiscal</td>
-              <td>Asesoramiento Fiscal</td>
+              <td>Asesoramiento Fiscal y Contable</td>
+              <td>Asesoramiento Fiscal y Contable</td>
             </tr>
             <tr>
               <td>Presentación de impuestos</td>
@@ -176,4 +176,9 @@ small {
   color: gray;
   font-size: 1.5rem;
 }
+
+.fullscreen{
+  z-index: -1;
+}
+
 </style>

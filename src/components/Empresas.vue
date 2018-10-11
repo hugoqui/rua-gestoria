@@ -19,17 +19,17 @@
                         <td class="grey lighten-3">
                             <h2>88<small>€/mes</small> </h2>
                             <strong>FISCAL BÁSICO</strong> <br>
-                            <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
                         </td>
                         <td class="grey lighten-3">
                             <h2>125<small>€/mes</small> </h2>
                             <strong>FISCAL COMPLETO</strong> <br>
-                            <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
                         </td>              
                         </tr>
                         <tr>
-                        <td>Asesoramiento Fiscal</td>
-                        <td>Asesoramiento Fiscal</td>
+                        <td>Asesoramiento Fiscal y Contable</td>                        
+                        <td>Asesoramiento Fiscal y Contable</td>                        
                         </tr>
                         <tr>
                         <td>Presentación de impuestos</td>
@@ -49,7 +49,7 @@
 <style>
 main {
   position: relative;
-  margin-top: -65px;
+  margin-top: -65px;  
 }
 
 main img {

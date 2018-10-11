@@ -39,6 +39,7 @@
 main {
   position: relative;
   margin-top: -65px;
+  
 }
 
 .info {  

@@ -25,17 +25,17 @@
                         <td class="fondo4 lighten-3">
                             <h2>30<small>€/mes</small> </h2>
                             <strong>BÁSICO</strong> <br>
-                            <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
                         </td>
                         <td class="fondo4 lighten-3">
                             <h2>39<small>€/mes</small> </h2>
                             <strong>ESTÁNDAR</strong> <br>
-                            <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
                         </td>
                         <td class="fondo4 lighten-3">
                             <h2>54<small>€/mes</small> </h2>
                             <strong>COMPLETO</strong> <br>
-                            <button class="btn waves-effect waves-light fondo3">SOLICITAR</button>
+                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
                         </td>
                         </tr>
                         <tr>
@@ -70,10 +70,11 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 main {
   position: relative;
-  margin-top: -65px;
+  margin-top: -65px; 
+     
 }
 
 main img {

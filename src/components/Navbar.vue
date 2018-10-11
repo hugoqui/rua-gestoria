@@ -16,15 +16,15 @@
       </ul>
     </div>
     
-  <ul class="sidenav">
-    <li v-bind:class="{active:element==1}" @click="element=1"><router-link class="uppercase" to="/">Inicio</router-link></li>   
-    <li v-bind:class="{active:element==2}" @click="element=2"><router-link class="uppercase" to="autonomos">Autónomos</router-link></li>   
-    <li v-bind:class="{active:element==3}" @click="element=3"><router-link class="uppercase" to="empresas">Empresas</router-link></li>   
+  <ul class="sidenav" id="mobile-demo">
+    <li v-bind:class="{active:element==1}" @click="element=1; hideNav()"><router-link class="uppercase" to="/">Inicio</router-link></li>   
+    <li v-bind:class="{active:element==2}" @click="element=2; hideNav()"><router-link class="uppercase" to="autonomos">Autónomos</router-link></li>   
+    <li v-bind:class="{active:element==3}" @click="element=3; hideNav()"><router-link class="uppercase" to="empresas">Empresas</router-link></li>   
        
-    <li v-bind:class="{active:element==4}" @click="element=4"><router-link class="uppercase" to="servicios">Servicios</router-link></li>   
+    <li v-bind:class="{active:element==4}" @click="element=4; hideNav()"><router-link class="uppercase" to="servicios">Servicios</router-link></li>   
     
-    <li v-bind:class="{active:element==5}" @click="element=5"><router-link class="uppercase" to="tarifas">Tarifas</router-link></li>   
-    <li v-bind:class="{active:element==6}" @click="element=6"><router-link class="uppercase" to="contacto">Contacto</router-link></li>   
+    <li v-bind:class="{active:element==5}" @click="element=5; hideNav()"><router-link class="uppercase" to="tarifas">Tarifas</router-link></li>   
+    <li v-bind:class="{active:element==6}" @click="element=6; hideNav()"><router-link class="uppercase" to="contacto">Contacto</router-link></li>   
   </ul>
   </nav>
   
@@ -32,10 +32,20 @@
 
 <script>
 export default {
+  mounted: function() {
+    $(".dropdown-trigger").dropdown();
+    $(".sidenav").sidenav();
+    $(".slider").slider();
+  },
   data() {
     return {
       element:1
     };
+  },
+  methods:{
+    hideNav(){
+      console.log('hide')
+    }
   }
 };
 </script>
@@ -43,7 +53,7 @@ export default {
 <style>
 nav {
   position: relative;
-  z-index: 3;
+  /* z-index: 3; */
   background: transparent;
   box-shadow: none;
   background-image: linear-gradient(rgba(0, 0, 0, 0.454), transparent);

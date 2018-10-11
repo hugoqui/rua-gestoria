@@ -131,5 +131,6 @@ export default {
 .parallax-container {
   height: 400px;
   top: -65px;
+  z-index: -1;
 }
 </style>
