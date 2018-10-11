@@ -4,109 +4,113 @@
         <div class="parallax"><img src="http://www.grupoemgestion.com/wp-content/uploads/2016/10/asesoramiento-contable-empresas.jpg"></div>
     </div>
 
-    <h1 class="color1 center-align uppercase">Nuestros Servicios</h1>
+    <h1 class="color1 center-align uppercase">Nuestros Servicios para Empresas</h1>
     <div class="container">
         <div class="row">
-            <h3 class="color2">Consultas y Gestiones Online</h3>
-            <h5 class="color3">Asesoramiento, estés donde estés</h5>
-            <div class="row">
-            <div class="col m12 l6" style="font-size:17px; text-align:justify">
-                Somos un equipo de abogados y asesores especializado en áreas como la fiscalidad, gestión laboral, finanzas y emprendimiento.<br><br>
-                Cuéntanos cualquier tema que te preocupe y te atenderemos por teléfono, Skype o Hangouts.<br> <br>
-                Estamos de lunes a jueves de 8:30 a 17h, los viernes hasta las 14h. En cuanto nos llegue tu consulta, contactaremos contigo.<br>                
-            </div>
-            <div class="col m12 l6 center-align">                                
-                <img class="responsive-img z-depth-2" src="https://fortis-iure.com/wp-content/uploads/2018/06/Asesoria-legal-online-el-abogado-y-las-nuevas-tecnologias.jpg" alt="">                
-            </div>            
+            <div class="col m12" style="text-align:justify">
+                Rua Gestoría te ofrece una asesoría completa para tu empresa somos un equipo de asesores especializado en áreas como la fiscalidad, gestión laboral y contable para la buena organización de la empresa. Preguntanos por los servicios que necesites!
+                Ofrecemos servicios especializados de gestoría para emprendedores. El equipo de profesionales de Rua Gestoría te acompañará en la gestión de todo el proceso, el desarrollo de la gestión fiscal y contable, y el asesoramiento financiero y jurídico. 
+                <br>                
             </div>
         </div>
 
-        <div class="row">
-            <h3 class="color2">Creación de Empresas</h3>
-            <h5 class="color3">Asesores expertos en la creación de nuevas empresas</h5>
-            <div class="row"> 
-                <div class="col m12 l6" style="font-size:17px; text-align:justify">
-                    Ofrecemos servicios especializados de gestoría para emprendedores. El equipo de profesionales de Rua Gestoría te acompañará en la gestión de todo el proceso, desde la idea, hasta el desarrollo de la gestión fiscal y contable, y el asesoramiento financiero y jurídico. <br>
-                    Antes de lanzarse a crear una empresa, es necesario valorar si la idea de negocio es viable, los recursos necesarios y conocer todos  los requisitos legales, fiscales y burocráticos. Tener ideas y visión de negocio es importante, pero no siempre es fácil saber cuáles son los mejores pasos a seguir para crear una empresa de éxito, conocer los diferentes aspectos que harán de la idea un negocio rentable y cómo hacerlo real.
-                </div>
-                <div class="col m12 l6 center-align">                                
-                    <img class="responsive-img z-depth-2" src="https://jraeconomistas.com/wp-content/uploads/2016/12/asesoria-fiscal-irpf.jpg" alt="">                
-                </div>
-            </div>
-            
-        </div>
-        <div class="row">
-            <div class="col m4">
-                <p>
-                    <h5 class="color3 center encuadrados">Planificación financiera</h5>
-                    <ul class="col s11">
-                        <li>Análisis y asesoramiento financiero de la idea de negocio.</li>
-                        <li>Elaboración de Planes de Negocio, Financieros y estudios de viabilidad.</li>
-                        <li>Búsqueda de financiación y negociación directa con entidades bancarias.</li>
-                    </ul>
-                </p>                
-            </div>
-            <div class="col m4">
-                <p class="center">
-                <h5 class="color3 center encuadrados">Fiscalidad para emprendedores</h5>
-                    <ul class="col s11">
-                        <li>Te asesoramos para decidir la forma jurídica más adecuada para tu negocio.</li>
-                        <li>Alta de Autónomos en Hacienda y la Seguridad Social.</li>
-                        <li>Asesoramiento legal y gestión de constitución de nuevas sociedades.</li>
-                    </ul>
-                </p>
-            </div>
-            <div class="col m4">
-                <p class="center">
-                    <h5 class="color3 center encuadrados">Asesoría Legal</h5>
-                    <ul class="col s11">
-                        <li>Elaboración de contratos mercantiles y pactos de socios.</li>
-                        <li>LOPD: revisión e implementación de la política de protección de datos.</li>
-                        <li>LSSICE – Derecho de Internet: Adecuación de páginas webs, apps y comercios electrónicos.</li>
-                    </ul>
-                </p>
-            </div>
-            <div class="center-align">
-                <router-link to="contacto" class="btn waves-effect">Solicitar</router-link>
-            </div>
-        </div>
+        
 
         <div class="row">
-            <h3 class="color2">Asesoría Fiscal</h3>
-            <div class="col m12 l6" style="font-size:18px; text-align:justify">
-                Olvídate de la contabilidad, las gestiones y los trámites de presentación de impuestos y dedica el tiempo en lo que es realmente útil para tu negocio. Nuestro equipo de asesores fiscales especializados se ocupará de todo. <br>
-                El entorno fiscal en España se encuentra en continua transformación y se van introduciendo importantes cambios en la gestión fiscal que afecta a las empresas y los autónomos. Estar al día de la actualidad tributaria requiere de conocimiento especializado y una planificación detallada e individualizada de cada situación. Si quieres reducir el riesgo de cometer errores y garantizar que optimizas al máximo los beneficios de tu negocio, deja la gestión de tus impuestos en asesores fiscales especializados.
-            </div>
+            <h3 class="color2 center-align">Asesoría Fiscal</h3>
+
             <div class="col m12 l6 center-align">                                
                 <img class="responsive-img z-depth-2" src="https://factumasesores.com/wp-content/uploads/2017/03/Asesoria-fiscal.jpg" alt="">                
             </div>
-        </div>
-        <div class="row">
-            <h5 class="color3 center-align">Asesoría Fiscal online</h5>            
-            <p class="col m4 center">Estudio sobre la forma jurídica más adecuada para nuevos negocios.</p>                                
-            <p class="col m4 center">Planificación fiscal para empresas, autónomos y particulares.</p>                                
-            <p class="col m4 center">Requerimientos, inspecciones y recursos de órganos administrativos.</p>                                                        
-        </div>
-        <div class="row">
-            <h5 class="color3 center-align">Impuestos</h5>            
-            <p class="col m4 center">
-                Presentación de todo tipo de Declaraciones informativas.  Contrata online los principales modelos.
-            </p>                                
-            <p class="col m4 center">
-                Confección y presentación de todo tipo de impuestos. Contrata online los principales modelos.
-            </p>                                
-            <p class="col m4 center">
-                Expertos en gestión de la Declaración de la Renta, incluyendo presentación de Rentas Complementarias, fuera de plazo, Patrimonio o extranjeros residentes.
-            </p>                                
+
+
+            <div class="col m12 l6" style="text-align:justify">
+                Olvídate de las gestiones y los trámites de presentación de impuestos y dedica el tiempo en lo que es realmente útil para tu negocio. Nuestro equipo de asesores fiscales especializados se ocupará de todo. <br>
+                Realización y presentación de todas las liquidaciones de impuestos donde podrás saber en todo momento lo que deberás pagar en el trimestre correspondiente y resúmenes anuales: <br>
+                <ul style="padding-left:10%">
+                    <li>IVA: 303 Y 390 (trimestral y anual).</li>
+                    <li>Operaciones con terceros: 347 y 349 (nacional e intracomunitario).</li>
+                    <li>Retenciones 111, 115, 130, 131, 180 y 190.</li>
+                    <li>Impuesto de sociedades: 200 y 202 (balance de situación, cuentas de pérdidas y ganancias, estado de cambios en el patrimonio neto, estado de flujos de efectivo, memoria).</li>
+                    <li>Libros oficiales del registro mercantil: Libro Diario, Balance de situación, Balances de Sumas y Saldos (trimestrales) y Cuenta de Pérdidas y Ganancias.</li>
+                </ul>
+            </div>
             
         </div>
 
-
-        <div class="center-align">
-            <router-link to="contacto" class="btn waves-effect">Solicitar</router-link>
+        <h3 class="color2 center-align">Asesoría Contable</h3>
+         <div class="row">
+            <div class="col m12" style="text-align:justify">
+                Te ayudamos con tu contabilidad mediante la realización por completo las obligaciones contables de acuerdo al Nuevo 
+                Plan General de Contabilidad y con la cumplimentación de las obligaciones formales.<br>                
+            </div>
         </div>
 
-    </div>    
+        <h3 class="color2 center-align">Asesoría Laboral</h3>
+         <div class="row">
+            <div class="col m12" style="text-align:justify">
+                Comprobación/cálculo de IRPF a aplicar en la nómina <br>
+                <ul>
+                    <li>Confección de nóminas y seguros sociales (TC1/TC2).</li>
+                    <li>Tramitación telemática de las altas, bajas y variaciones en la TGSS.</li>
+                    <li>Tramitación telemática de los partes de enfermedad común al INSS.</li>
+                    <li>Tramitación telemática de los partes de accidente.</li>
+                    <li>Estudio y análisis de nóminas.</li>
+                    <li>Cartas modelo para despido y sanciones.</li>
+                    <li>Comprobación/cálculo de indemnizaciones.</li>
+                    <li>Comprobación/cálculo de embargos de salarios.</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>  
+
+    <h1 class="color1 center-align uppercase">Nuestros Servicios para Empresas</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col m12" style="text-align:justify">
+                    Toda la gestión de tus obligaciones tanto laborales como tributarias y otras muchas opciones para particulares: fiscal, marketing, contabilidad, facturación, etc. <br>
+                    Nos encargamos de la presentación de impuestos y modelos fiscales obligatorios para empresas. 
+                    <br>                
+                </div>
+            </div>
+
+            <div class="row">
+                <h3 class="color2 center-align">Asesoría Fiscal</h3>
+                <div class="col m12 l6 center-align">                                
+                    <img class="responsive-img z-depth-2" src="https://jraeconomistas.com/wp-content/uploads/2016/12/asesoria-fiscal-irpf.jpg" alt="">                
+                </div>
+                <div class="col m12 l6" style="text-align:justify">
+                    Realización y presentación de todas las liquidaciones de impuestos, así como de sus respectivos resúmenes anuales: <br>
+                    <ul style="padding-left:10%">
+                        <li>IVA trimestral y anual : 303 y 390.</li> <br>
+                        <li>Operaciones con terceros: 347 y 349 (nacional e intracomunitario).</li> <br>
+                        <li>Retenciones 111, 115, 130, 131, 180 y 190.</li> <br>
+                        <li>Libros de ingresos y gastos.</li> <br>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <h3 class="color2 center-align">Asesoría Contable</h3>
+                <div class="col m12" style="text-align:justify">
+                    Realización de todas las obligaciones contables de la sociedad de acuerdo al Nuevo Plan General de Contabilidad. Cumplimentación de las obligaciones formales.
+                    <br>                
+                </div>
+                <h3 class="color2 center-align">Asesoría Laboral</h3>            
+                <ul>
+                    <li>Cálculo de IRPF a aplicar.</li>
+                    <li>Realización de nóminas y seguros sociales (TC1/TC2).</li>
+                    <li>Estudio y análisis de nóminas.</li>
+                    <li>Tramitación on-line de las altas, bajas y variaciones en la TGSS.</li>
+                    <li>Tramitación on-line de los partes de enfermedad común al INSS.</li>
+                    <li>Tramitación on-line de los partes de accidente.</li>
+                    <li>Despidos y sanciones.</li>
+                    <li>Cálculo de indemnizaciones y embargo de salario.</li>
+                </ul>
+            </div>
+        </div>  
 </div>
 </template>
 
@@ -128,12 +132,12 @@ export default {
 
 p {
   text-align: justify;
-  font-size: 20px !important;
+  /* font-size: 20px !important; */
 }
 
 ul, li {
     list-style-type: disc !important;
-    font-size: 15px;
+    /* font-size: 15px; */
 }
 
 .center {
