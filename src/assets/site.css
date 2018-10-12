@@ -5,13 +5,13 @@ body {
 }
 
 .color1 {
-  color: #283149;
+  color: #363636;
 }
 .color2 {
-  color: #404b69;
+  color: #524d4d;
 }
 .color3 {
-  color: #00818a;
+  color: #531515;
 }
 .color4 {
   color: #dbedf3;
@@ -20,17 +20,17 @@ body {
   background: #283149;
 }
 .fondo2 {
-  background: #404b69;
+  background: #524d4d;
 }
 .fondo3 {
-  background: #00818a;
+  background: #531515;
 }
 .fondo4 {
   background: #dbedf3;
 }
 
 footer {
-  background: #00818a !important;
+  background: #2e0e0e !important;
 }
 
 .main {

@@ -19,12 +19,12 @@
                         <td class="grey lighten-3">
                             <h2>88<small>€/mes</small> </h2>
                             <strong>FISCAL BÁSICO</strong> <br>
-                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
+                            <router-link to="contacto" class="btn waves-effect fondo3">SOLICITAR</router-link>
                         </td>
                         <td class="grey lighten-3">
                             <h2>125<small>€/mes</small> </h2>
                             <strong>FISCAL COMPLETO</strong> <br>
-                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
+                            <router-link to="contacto" class="btn waves-effect fondo3">SOLICITAR</router-link>
                         </td>              
                         </tr>
                         <tr>

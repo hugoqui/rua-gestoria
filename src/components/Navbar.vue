@@ -1,7 +1,12 @@
 <template>
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo"> <img width="100" src="./../assets/logo.png" alt="rua gestoria">  </a>
+      <a href="#" class="brand-logo">
+        <!-- <img width="100" src="./../assets/logo.png" alt="rua gestoria">   -->
+        <div style="border:solid 2px red; width:100px; height:100px; font-size:60px">
+          RG
+        </div>
+      </a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
       <ul id="nav-mobile" class="right hide-on-med-and-down">        

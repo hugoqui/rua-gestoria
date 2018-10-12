@@ -14,11 +14,11 @@
         <div class="container">
           <div class="row">
             <div class="input-field col s12 m6">
-              <select v-model="selectedPlan">
+              <select v-model="selectedPlan" class="color2">
                 <option value="" disabled>Seleccione su Opción</option>
-                <option value="1" class="uppercase">Gestoría Online Fiscal y Laboral</option>
-                <option value="2" class="uppercase">Asesoría Financiera</option>
-                <option value="3" class="uppercase">Asesoría Jurídica</option>
+                <option value="1" class="uppercase color2">Gestoría Online Fiscal y Laboral</option>
+                <option value="2" class="uppercase color2">Asesoría Financiera</option>
+                <option value="3" class="uppercase color2">Asesoría Jurídica</option>
               </select>
               <label>Plan de Gestoría</label>
             </div>
@@ -35,7 +35,7 @@
     </main>     
 </template>
 
-<style>
+<style >
 main {
   position: relative;
   margin-top: -65px;
@@ -49,6 +49,18 @@ main {
 
 .info table{
   box-shadow: 0px 0px 10px gray;
+}
+
+.select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup{
+  color: grey;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  color: #531515 ;
+}
+
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid #531515;
 }
 
 @keyframes bubble {

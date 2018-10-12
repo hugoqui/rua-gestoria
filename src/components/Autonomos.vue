@@ -25,17 +25,17 @@
                         <td class="fondo4 lighten-3">
                             <h2>30<small>€/mes</small> </h2>
                             <strong>BÁSICO</strong> <br>
-                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
+                            <router-link to="contacto" class="btn waves-effect fondo3">SOLICITAR</router-link>
                         </td>
                         <td class="fondo4 lighten-3">
                             <h2>39<small>€/mes</small> </h2>
                             <strong>ESTÁNDAR</strong> <br>
-                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
+                            <router-link to="contacto" class="btn waves-effect fondo3">SOLICITAR</router-link>
                         </td>
                         <td class="fondo4 lighten-3">
                             <h2>54<small>€/mes</small> </h2>
                             <strong>COMPLETO</strong> <br>
-                            <router-link to="contacto" class="btn waves-effect">SOLICITAR</router-link>
+                            <router-link to="contacto" class="btn waves-effect fondo3">SOLICITAR</router-link>
                         </td>
                         </tr>
                         <tr>
