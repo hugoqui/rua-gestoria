@@ -181,4 +181,8 @@ small {
   z-index: -1;
 }
 
+p {
+  font-size: 1.5rem;
+}
+
 </style>

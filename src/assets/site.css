@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Helvetica");
+
+body {
+  font-family: Helvetica !important; 
+}
+
 .color1 {
   color: #283149;
 }
